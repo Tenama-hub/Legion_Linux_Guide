@@ -21,7 +21,7 @@ https://gamingonlinux.com/
 <br>
 
 # __Distribution recommendation__
-Based on my own experience + community feedback. <br> Treat this as a way to begin your Linux journey. These are mainstream, well-known, supported linux distributions with huge user-bases and documentation.
+Based on my own experience + community feedback. <br> Treat this as a way to begin your Linux journey. The following are mainstream, well-known, supported linux distributions with huge user-bases and documentation:
 | Name | Pros | Cons | Links |
 | ------------- | ------------- | ------------- | ------------- |
 | **[Fedora](https://fedoraproject.org/)** | • Comes with GNOME or KDE Plasma by default, alongside multiple desktop flavors.<br>• Provides a near-vanilla Linux desktop experience.<br>• Up-to-date drivers with strong focus on stability.<br>• Excellent documentation and large community support.<br>• Security-focused defaults.<br>• Semi-rolling release model. | • Nvidia drivers and codecs require manual setup.<br>• Secure Boot setup requires manual signing post-install. | [Post-Install Guide](https://github.com/Tenama-hub/Linux_guide_for_Legion/blob/main/fedora_post_install_guide.md) |
@@ -29,14 +29,14 @@ Based on my own experience + community feedback. <br> Treat this as a way to beg
 | **[Kubuntu](https://kubuntu.org/)** | • Ships with KDE Plasma by default. <br>• Secure Boot configured by default.<br>• Minimal install skips snaps (if you are interested in that) <br>• Huge documentation, inherits Ubuntu's popularity.<br>• Available in both non-LTS or LTS. <br>• Everything works out of the box. | • Non-LTS variants aren't as "stable" as the LTS counterpart. <br> • Inherits Ubuntu's choices, but it's not that big of a deal. | [Post-Install Guide](https://github.com/Tenama-hub/Lenovo_Legion_Linux-Guide/blob/main/ubuntu%26kubuntu_post_install_guide.md) |
 | **[Linux Mint](https://linuxmint.com/)** | • Comes with Cinnamon as the primary desktop environment (Other editions offer XFCE/MATE).<br>• Ships with many useful tools pre-installed.<br>• Cinnamon edition supports customizable touchpad gestures.<br>• Stable release model focused on reliability. | • Uses older package bases and technologies, which may affect newer hardware support.<br>• Still relies on X11, which is behind certain modern features (dual screens may not work as intended for example).<br>• Secure Boot setup requires manual signing post-install. | [Post-Install Guide](https://github.com/Tenama-hub/Linux_guide_for_Legion/blob/main/linux_mint_post_install_guide.md) |
 
-If you feel adventurous...<br> Try out these distributions that are highly praised by the Linux community.
+If you feel adventurous...<br> Try out these distributions that are highly praised by the Linux community:
 | Name | Pros | Cons | Links |
 | ------------- | ------------- | ------------- | ------------- |
 | **[Bazzite](https://bazzite.gg/)** | • Comes with Plasma/Gnome by default<br>• Pre-installed Steam, Nvidia drivers and codecs<br>• Can be used for any use case, not just gaming<br>• Great alternative to SteamOS<br>• Very hard to break and requires little to no maintenance due to its "atomic" nature<br>• Atomic distribution based on Fedora. Updates can be done in the background and are relatively quick | • Apps can only be installed as Flatpaks, AppImages, HomeBrew or through Distrobox/Kontainer.<br>• You cannot do system-level changes like on traditional distros, unless you create your own fork of the project.<br>• Support outside their official Discord leaves more to be desired.<br>• No secure boot post-install. Needs to be signed manually (can be done through Ujust) <br> • Uses more power on idle than other distros (could be a bug) | [Post-Install Guide](https://docs.bazzite.gg/General/Installation_Guide/post-installation/) |
 | **[EndeavourOS](https://endeavouros.com/)** | • Comes with Plasma by default. Can install a different desktop environment during the installation process (same for the bootloader)<br>• Pure Arch Linux experience, with several tools and tuning done to get you up and running<br>• Bleeding edge distribution based on Arch Linux, which means you will get frequent updates<br>• Nvidia drivers pre-installed<br>• Great documentation & community | • More terminal focused, as it doesn't come bundled with a GUI package manager.<br>• Updates can go bad due to it's bleeding edge nature and you will experience several bugs here and there.<br>• AUR isn't the safest place to get your packages from.<br>• Requires prior linux knowledge in order to properly use it. Not suitable for newbies or for production environments.<br>• No secure boot post-install. Needs to be signed manually. | |
 | **[CachyOS](https://cachyos.org/)** | • Comes with Plasma by default. Can install a different desktop environment during the installation process (same for the bootloader)<br>• Pre-configured snapshots in case updates go bad (If you choose BTRFS+Limine by default)<br>• One-click install for gaming packages (Steam, Lutris, Heroic, Mangohud with Goverlay + libraries needed) + nvidia drivers pre-installed<br>• A functional software center that allows installing AUR and Flatpaks<br>• Bleeding edge distribution based on Arch Linux, which means you will get frequent updates<br>• Optimized for your hardware, meaning you can get a boost in performance<br>• Great documentation | • "Optimizations" can be a hit or miss on some scenarios.<br>• Updates can go bad due to it's bleeding edge nature and you will experience several bugs here and there.<br>• AUR isn't the safest place to get your packages from.<br>• Requires prior linux knowledge in order to properly use it. Not suitable for newbies or for production environments.<br>• No secure boot post-install. Needs to be signed manually. | [Post-Install guide](https://wiki.cachyos.org/configuration/post_install_setup/) |
 
-# __Distributions to avoid__
+# __Distributions to reconsider using__
 | Name | Reason |
 | ------------- | ------------- |
 | **Debian (stable branch)** | Unless you use Debian Sid/testing, updates are released very slowly and packages tend to get outdated pretty quick. |
@@ -44,6 +44,7 @@ If you feel adventurous...<br> Try out these distributions that are highly prais
 | **Ubuntu** | A lot of decisions are tailored for enterprise solutions + [pushing for AI](https://www.zdnet.com/article/ubuntu-26-04-is-os-for-ai-agentic-era-says-canonical-mark-shuttleworth-why/). Snap packages are okay, but some apps aren't 100% officially supported and come with their own issues (especially if you remove snap support on Ubuntu. Kubuntu and the derivatives can safely remove snaps.)|
 | **SteamOS** | Doesn't have an nvidia alternative and is not finished for **non-handheld devices**. If you REALLY need something similar, use Bazzite. |
 | **Manjaro** | It's future is uncertain as it has a history of a lot of wrongdoings, strange decisions and updates that led to broken systems or significant bugs. Was on a hiatus due to [disagreements and developers being on strike](https://forum.manjaro.org/t/manjaro-2-0-manifesto/186171). There are much better options out there. |
+| **Omarchy** | The whole project is very suspicious (especially its funding and the creator itself). Having an AI debug your system issues will always lead to other problems down the line. It's just another Arch Linux distribution with a customized HyprLand desktop. Don't buy into the hype of this vibe-coded Linux Distribution.|
 | **ZorinOS** | The development team is basically 2 main developers + community contributions, demands money for custom desktop layouts. Gets a lot more outdated compared to the other Ubuntu-based distributions. Not worth your time (at that point, just use Ubuntu) |
 | **Hacking/Cybersecurity distributions** | Parrot, Tails, Kali Linux and alike are meant to be used either through VMs or external devices, not on actual hardware. |
 | **Obscure/outdated distributions** | Avoid distributions maintained by randoms/single developer, that are **"too good to be true"** (nonsense promises) or try to replicate Windows 1:1. |
@@ -52,7 +53,7 @@ If you feel adventurous...<br> Try out these distributions that are highly prais
 <br>
 
 # __Desktop environments (DE)__
-Linux does not have a single desktop experience. There are plenty of them, each with their own pros, cons & querks. This part of the guide should give a brief summary or the most popular desktop environments that are provided by default on almost all distributions out there. <br>
+Linux does not have a single desktop experience. There are plenty of them, each with their own pros, cons & quirks. This part of the guide should give a brief summary or the most popular desktop environments that are provided by default on almost all distributions out there. <br>
 For the tech nerds, I will **not** cover window managers. <br>
 Based on my own experience + community feedback.
 | Name | Pros | Cons |
@@ -67,8 +68,8 @@ Based on my own experience + community feedback.
 
 # __Installing Legion tools and drivers (LEGACY)__ 
 > [!WARNING]
-> As of Kernel 6.17, power profiles switching and battery conservation don't require the Legion Driver. Kernel 7.1 and up should introduce native fan control too.\
-> This driver is now marked as LEGACY, due to it being slowly introduced with each kernel update. Tools that depend on this driver may no longer work.
+> As of Kernel 6.17, power profiles switching and battery conservation don't require the Legion Driver. Kernel 7.1 and up should introduce native fan control too (probably with [LACT](https://flathub.org/en/apps/io.github.ilya_zlobintsev.LACT)).\
+> This driver is now marked as LEGACY, as its features being slowly integrated with each kernel update. Tools that depend on this driver may no longer work.
 
 This allows you to use most, if not all the legion exclusive features on linux (fan control, panel overdrive, etc). Comes with a GUI to easily access these said features.   
 If you use Plasma and you want to have a tool that gives you the important options at a glance, I recommend using [PlasmaVantage](https://gitlab.com/Scias/plasmavantage) or Cinnamon's inspired counterpart from the [desktop plugin store](https://cinnamon-spices.linuxmint.com/applets/view/395)   
@@ -113,7 +114,7 @@ The tool that comes bundled with your distribution of choice should be good enou
 | ------------- | ------------- |
 | [Tuned](https://github.com/redhat-performance/tuned) | A mix between Power Profiles Daemon and TLP. Easily integrates with desktop environments that support power profile switching and can be customized to your needs. Used by default on Fedora and Bazzite. |
 | [Power Profiles Daemon](https://gitlab.freedesktop.org/upower/power-profiles-daemon) | Default power profile management service used by most Linux distributions. Works well with `pstate` CPU scaling and most hardware configurations. Simpler than TLP, but effective for general usage. Conflicts with most other power management tools except Powertop. |
-| [TLP](https://linrunner.de/tlp/index.html) | Advanced power management tool that applies extensive optimizations depending on whether the system is running on battery or AC power. Highly configurable, but incorrect setup can cause issues. Conflicts with other power management tools. GUI frontend available through [TLPUI](https://github.com/d4nj1/TLPUI). |
+| [TLP](https://linrunner.de/tlp/index.html) | Advanced power management tool that applies extensive optimizations depending on whether the system is running on battery or AC power. Highly configurable, but incorrect setup can cause issues. Conflicts with other power management tools. GUI front-end available through [TLPUI](https://github.com/d4nj1/TLPUI). |
 | [Auto-Cpufreq](https://github.com/AdnanHodzic/auto-cpufreq) | Lightweight automatic CPU power optimization tool that dynamically adjusts CPU scaling and governors based on battery or AC status. Works well with `pstate`, though some hardware may experience compatibility issues. |
 | [Powertop](https://wiki.archlinux.org/title/Powertop) | Terminal-based power analysis and tuning utility for monitoring system power consumption and enabling hardware power-saving optimizations. Best used for diagnosing power draw, since most automatic optimizations are already handled by other tools. |
 ###
@@ -185,7 +186,7 @@ Even if you have TSC enabled and your games have dubious anomalies, give this on
 <details>
 <summary>Bad laptop mic quality</summary>
 
-* Set your microphone volume to 30-50%, then install this [noise cancelling module](https://github.com/Rikorose/DeepFilterNet/blob/main/ladspa/README.md) or use EasyEffects\NoiseTorch.
+* Set your microphone volume to 30-50% (20-25% if you use your laptop's internal mic), then install this [noise cancelling module](https://github.com/Rikorose/DeepFilterNet/blob/main/ladspa/README.md) or use EasyEffects\NoiseTorch-Ng.
 </details>
 
 
