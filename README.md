@@ -134,6 +134,8 @@ The tool that comes bundled with your distribution of choice should be good enou
 # __General bugs and fixes__
 <details>
 <summary>Fix games stuttering/lagging/bugging out only on Legions</summary>
+
+  ###
   
 Some legion hardware have a problem where some games will randomly stutter or lag more than other devices with the same specs. This is caused by [HPET](https://en.wikipedia.org/wiki/High_Precision_Event_Timer). To check if you have it enabled, run this command: \
 `cat /sys/devices/system/clocksource/clocksource0/current_clocksource` \
@@ -152,12 +154,16 @@ Even if you have TSC enabled and your games have dubious anomalies, give this on
 <details>
 <summary>Fix laptop speakers not working (Gen 10 Legions)</summary>
   
+  ###
+  
 * You will need [this special driver](https://github.com/marco-giunta/legion-pro7-gen10-audio), until it gets pushed in the kernel.
 
 </details>
 
 <details>
 <summary>System swappiness (if you have >= 16GB ram)</summary>
+  
+  ###
   
 * Setting your swappiness to 10 will reduce stuttering when your RAM memory is almost full, as the system will not prioritize using your SWAP partition as system memory for apps.<br>
  ```sudo nano /etc/sysctl.conf```
@@ -166,6 +172,8 @@ Even if you have TSC enabled and your games have dubious anomalies, give this on
 <details>
 <summary>Zram tweaks</summary>
 
+  ###
+  
 **This should be already tweaked by the majority of mainstream distributions.** <br>
 * (Make sure your distribution has zram enabled by running ```zramctl``` in the terminal!)
 * If you have games crashing due to memory leaks, tweaking zram would help ameliorate the problem. To do so, do the following: <br>
@@ -179,6 +187,8 @@ Even if you have TSC enabled and your games have dubious anomalies, give this on
 <details>
 <summary>Bad speakers quality</summary>
 
+  ###
+  
 * If your speakers sound shallow and bad, try out [this preset](https://github.com/Tomiscout/Lenovo-Legion-5-Pro-Linux-guide/tree/main/easyeffects). If you use handhelds, [better give this one a try](https://www.reddit.com/r/LegionGo/comments/1m7632y/legion_go_s_steam_os_audio_fix_pipewire_eq/).
 * If you don't want to use Easyeffects for your legion laptop, download & extract the pipewire archive in .config, open convolver-sink.conf and change YOURUSERNAME with your linux's username. This method may cause issues with external speakers, so be wary!<br>
   **Restart pipewire and change your sound profile in settings!**
@@ -186,6 +196,8 @@ Even if you have TSC enabled and your games have dubious anomalies, give this on
 <details>
 <summary>Bad laptop mic quality</summary>
 
+  ###
+  
 * Set your microphone volume to 30-50% (20-25% if you use your laptop's internal mic), then install this [noise cancelling module](https://github.com/Rikorose/DeepFilterNet/blob/main/ladspa/README.md) or use EasyEffects\NoiseTorch-Ng.
 </details>
 
@@ -194,6 +206,10 @@ Even if you have TSC enabled and your games have dubious anomalies, give this on
 <details>
 <summary>Refresh rate/ VRR not working</summary>
   
+  ###
+  
+> UNDER NO CIRCUMSTANCE, DO NOT INCREASE/DECREASE THE RESOLUTION OF YOUR SCREEN/REFRESH RATE PAST YOUR SPECS! DOING SO WILL CAUSE SEVERE ISSUES!
+
 * Some screen panels will force you to use either the highest or the lowest refresh rate (even keep you at the highest resolution). Edid.bin tells your screen what resolutions and refresh rates it supports. This is a problem that affects some panels due to generic drivers being used instead of the ones provided by the screen providers.
 1. In WINDOWS, download the CRU tool. Open it, then click on **EXPORT**. Save the file as edid.bin. (Make sure that you can see your refresh rates in Windows too. Otherwise, add them by yourself, then
 2. Copy the file to a usb drive and boot back to linux.
@@ -218,7 +234,3 @@ If you switch between hybrid and dedicated mode, you may encounter issues with y
 ```drm.edid_firmware={display_id}:edid/edid.bin,{display_id_2}:edid/edid.bin``` \
 If none of these commands/variables work, you will have to also add ```video={display_id}:e```.
 </details>
-
-
-> [!WARNING]
-> UNDER NO CIRCUMSTANCE, DO NOT INCREASE/DECREASE THE RESOLUTION OF YOUR SCREEN/REFRESH RATE PAST YOUR SPECS! DOING SO WILL CAUSE SEVERE ISSUES!
