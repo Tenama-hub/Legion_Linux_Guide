@@ -112,10 +112,9 @@ The tool that comes bundled with your distribution of choice should be good enou
 
 | Tool | Description |
 | ------------- | ------------- |
-| [Tuned](https://github.com/redhat-performance/tuned) | A mix between Power Profiles Daemon and TLP. Easily integrates with desktop environments that support power profile switching and can be customized to your needs. Used by default on Fedora and Bazzite. |
-| [Power Profiles Daemon](https://gitlab.freedesktop.org/upower/power-profiles-daemon) | Default power profile management service used by most Linux distributions. Works well with `pstate` CPU scaling and most hardware configurations. Simpler than TLP, but effective for general usage. Conflicts with most other power management tools except Powertop. Used by default on Ubuntu (and all its variants), Linux Mint, CachyOS. |
+| [Tuned](https://github.com/redhat-performance/tuned) | A mix between Power Profiles Daemon and TLP. Easily integrates with desktop environments that support power profile switching and can be customized to your needs (although it doesn't have a GUI solution). Used by default on Fedora and Bazzite. |
+| [Power Profiles Daemon](https://gitlab.freedesktop.org/upower/power-profiles-daemon) | Default power profile management service used by most Linux distributions. Works well with `pstate` CPU scaling and most hardware configurations. Simpler than TLP & Tuned, but has no manual tuning. Still, it's pretty effective as is. Conflicts with most other power management tools except Powertop. Used by default on Ubuntu (and all its variants), Linux Mint, CachyOS. |
 | [TLP](https://linrunner.de/tlp/index.html) | Advanced power management tool that applies extensive optimizations depending on whether the system is running on battery or AC power. Highly configurable, but incorrect setup can cause issues. Conflicts with all power management tools. GUI front-end available through [TLPUI](https://github.com/d4nj1/TLPUI). |
-| [Auto-Cpufreq](https://github.com/AdnanHodzic/auto-cpufreq) | Lightweight automatic CPU power optimization tool that dynamically adjusts CPU scaling and governors based on battery or AC status. Works well with `pstate`, though some hardware may experience compatibility issues. |
 | [Powertop](https://wiki.archlinux.org/title/Powertop) | Terminal-based power analysis and tuning utility for monitoring system power consumption and enabling hardware power-saving optimizations. Best used for diagnosing power draw, since most automatic optimizations are already handled by other tools. |
 ###
 <br>
